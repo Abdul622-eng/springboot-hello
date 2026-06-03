@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:21-jdk-slim
 
 ADD target/javaexpress-springboot-docker.jar javaexpress-springboot-docker.jar
 
