@@ -45,7 +45,7 @@ pipeline {
 
         stage('Docker Deploy') {
             steps {
-                sh 'docker run -itd -p 8081:8080 nasimun/docker_jenkins_springboot:${BUILD_NUMBER}'
+                sh 'docker run -itd -p 8082:8080 nasimun/docker_jenkins_springboot:${BUILD_NUMBER}'
             }
         }
 
