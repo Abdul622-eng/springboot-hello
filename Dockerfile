@@ -1,4 +1,4 @@
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jdk-jammy
 
 ADD target/javaexpress-springboot-docker.jar javaexpress-springboot-docker.jar
 
