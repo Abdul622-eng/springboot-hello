@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo "Building Docker Image"
                 sh 'ls'
-                sh 'docker build -t jabbar/docker_jenkins_springboot:${BUILD_NUMBER} .'
+                sh 'docker build -t nasimun/docker_jenkins_springboot:${BUILD_NUMBER} .'
             }
         }
 
@@ -39,13 +39,13 @@ pipeline {
 
         stage('Docker Push') {
             steps {
-                sh 'docker push jabbar/docker_jenkins_springboot:${BUILD_NUMBER}'
+                sh 'docker push nasimun/docker_jenkins_springboot:${BUILD_NUMBER}'
             }
         }
 
         stage('Docker Deploy') {
             steps {
-                sh 'docker run -itd -p 8081:8080 jabbar/docker_jenkins_springboot:${BUILD_NUMBER}'
+                sh 'docker run -itd -p 8081:8080 nasimun/docker_jenkins_springboot:${BUILD_NUMBER}'
             }
         }
 
