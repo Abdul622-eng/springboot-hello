@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/Abdul622-eng/springboot-hello.git'
+            }
+        }
+
         stage('Compile and Clean') { 
             steps {
                 sh "mvn clean compile"
@@ -50,4 +56,3 @@ pipeline {
         }
     }
 }
-
